@@ -8,7 +8,7 @@ export default function NavBar() {
                 <Link className="navbar-brand fs-1 fst-italic" to="/">GoFood</Link> {/*We need to remove these achor tags. Since they make our page reload and our application is not single page because of them.*/}
                 {/*We will use React router DOM to avoid page reload.*/}
                 {/*Link tag from react router dom will replace the anchor tag, use "to" property here instead of "to"*/}
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">

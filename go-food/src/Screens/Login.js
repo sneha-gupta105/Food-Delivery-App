@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
 function Login() {
   const [credentials, setCredentials] = useState({email:"", password:"",})
-
+  let navigate = useNavigate();
   const changeHandler = (event) => {
       setCredentials({...credentials, [event.target.name]:event.target.value})
   }
@@ -11,7 +11,7 @@ function Login() {
   const handleSubmit = async(e) => {
       e.preventDefault();         //preventDefault is an example of synthetic event
       console.log(JSON.stringify({email: credentials.email, password: credentials.password}))
-      const response = await fetch("http://localhost:5000/api/createuser",{
+      const response = await fetch("http://localhost:5000/api/loginuser",{
           method:'POST',
           headers:{
               'Content-Type' : 'application/json'
@@ -26,6 +26,12 @@ function Login() {
 
       if(!json.success){
           alert("Enter valid credentials")
+      }
+      else{
+        localStorage.setItem("authToken",json.authToken);
+        console.log(localStorage.getItem("authToken"));
+        navigate('/');
+
       }
   }
   return (
