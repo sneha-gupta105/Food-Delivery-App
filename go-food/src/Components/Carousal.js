@@ -34,14 +34,6 @@ function Carousal() {
           </form>
         </div>
 
-        <div className="carousel-item active">
-          <img
-            src="/burger.jpg"
-            className="d-block w-100"
-            style={{ filter: "brightness(50%)" }}
-            alt="Burger"
-          />
-        </div>
         <div className="carousel-item">
           <img
             src="/steak.jpg"
@@ -58,8 +50,17 @@ function Carousal() {
             alt="Fettuccine Alfredo"
           />
         </div>
-      </div>
+        <div className="carousel-item active">
+          <img
+            src="/burger.jpg"
+            className="d-block w-100"
+            style={{ filter: "brightness(50%)" }}
+            alt="Burger"
+          />
+        </div>
 
+      </div>
+      
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>

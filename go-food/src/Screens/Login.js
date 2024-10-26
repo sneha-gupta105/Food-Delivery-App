@@ -8,6 +8,7 @@ function Login() {
       setCredentials({...credentials, [event.target.name]:event.target.value})
   }
 
+
   const handleSubmit = async(e) => {
       e.preventDefault();         //preventDefault is an example of synthetic event
       console.log(JSON.stringify({email: credentials.email, password: credentials.password}))
