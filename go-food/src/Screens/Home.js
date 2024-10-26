@@ -94,12 +94,49 @@ export default function Home() {
                 alt="Fettuccine Alfredo"
               />
             </div>
-            <div className="carousel-item active">
+            <div className="carousel-item">
               <img
                 src="/burger.jpg"
                 className="d-block w-100"
                 style={{ filter: "brightness(50%)" }}
                 alt="Burger"
+              />
+            </div>
+            <div className="carousel-item">
+              <img
+                src="/ravioli.jpg"
+                className="d-block w-100"
+                style={{ filter: "brightness(50%)" }}
+                alt="Ravioli"
+              />
+            </div><div className="carousel-item active">
+              <img
+                src="/pizza.jpg"
+                className="d-block w-100"
+                style={{ filter: "brightness(50%)" }}
+                alt="Pizza"
+              />
+            </div><div className="carousel-item">
+              <img
+                src="/dosa.jpg"
+                className="d-block w-100"
+                style={{ filter: "brightness(50%)" }}
+                alt="Dosa"
+              />
+            </div><div className="carousel-item">
+              <img
+                src="/tamale.jpg"
+                className="d-block w-100"
+                style={{ filter: "brightness(50%)" }}
+                alt="Tamale"
+              />
+            </div>
+            <div className="carousel-item">
+              <img
+                src="/guacamole.jpg"
+                className="d-block w-100"
+                style={{ filter: "brightness(50%)" }}
+                alt="Guacamole"
               />
             </div>
           </div>
@@ -149,9 +186,10 @@ export default function Home() {
                           className="col-12 col-md-6 col-lg-3"
                         >
                           <Card
-                            foodName={filterItems.name}
+                            // foodName={filterItems.name}
+                            foodItem = {filterItems}
                             options={filterItems.options[0]}
-                            imgSrc={filterItems.img}
+                            // imgSrc={filterItems.img}
                           ></Card>
                         </div>
                       );
